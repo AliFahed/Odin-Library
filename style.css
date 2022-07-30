@@ -29,3 +29,76 @@ body {
   margin-left: 130px;
   cursor: pointer;
 }
+
+/* Main Content */
+.add-new-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.add-new-book-btn {
+  background: #fff;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 11px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.add-new-book-btn:hover {
+  background: #dddddd;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 10px 30px;
+  padding: 10px;
+  gap: 20px;
+}
+
+.book-container {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.1rem;
+}
+
+.book-container > button {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.book-status-btn {
+  padding: 12px 50px;
+  background: rgb(57, 156, 57);
+  color: #fff;
+}
+
+.book-status-btn:hover {
+  background: rgb(49, 200, 49);
+}
+
+.book-remove-btn {
+  padding: 12px 37px;
+  background: #f1f1f1;
+  color: rgb(129, 128, 128);
+}
+
+.book-remove-btn:hover {
+  background: rgb(247, 62, 62);
+  color: #fff;
+}
