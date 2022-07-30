@@ -102,3 +102,26 @@ body {
   background: rgb(247, 62, 62);
   color: #fff;
 }
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+
+.project-creator {
+  font-size: 1.1rem;
+}
+
+.project-creator > a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.project-creator > a:hover {
+  color: rgb(6, 6, 240);
+}
