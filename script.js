@@ -48,6 +48,19 @@ function createBookElements() {
   const removeButton = document.createElement('button');
   removeButton.classList.add('book-remove-btn');
   book_container.appendChild(removeButton);
+
+  displayBooks(book_title, book_author, book_pages, statusButton, removeButton);
 }
 
-createBookElements();
+function displayBooks(book_title, book_author, book_pages, statusButton, removeButton) {
+  library.forEach(library => {
+    for(let value in library) {
+      console.log(`${value}: ${library[value]}`);
+      book_title.textContent = library.title;
+      book_author.textContent = library.author;
+      book_pages.textContent = library.pages;
+      statusButton.textContent = library.bookStatus;
+      removeButton.textContent = 'Remove';
+    }
+  });
+}
