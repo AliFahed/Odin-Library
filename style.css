@@ -125,3 +125,78 @@ body {
 .project-creator > a:hover {
   color: rgb(6, 6, 240);
 }
+
+/* Add new book form */
+.add-new-book-form {
+  display: none; /* modify by javascript to show on click add new book */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  margin: 100px auto;
+  background: rgb(218, 218, 218);
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  color: #18220f;
+}
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+  height: 35px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-left: 15px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.checkbox-label {
+  display: inline;
+}
+
+.checkbox-input {
+  width: 10%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn {
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  width: 60%;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(15, 15, 15);
+  border: none;
+  border-radius: 9px;
+}
+
+.add-btn:hover {
+  background: rgb(38, 38, 38);
+  cursor: pointer;
+}
