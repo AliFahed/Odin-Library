@@ -5,6 +5,8 @@ const bookAuthor = document.querySelector('[data-book-author]');
 const bookPages = document.querySelector('[data-book-pages]');
 const bookStatusBtn = document.querySelector('[data-book-status]');
 const bookRemoveBtn = document.querySelector('[data-book-remove]');
+const addNewBookButton = document.querySelector('[data-add-new-book-btn]');
+const form = document.querySelector('form');
 
 let library = [];  // all the books will be stored in this array
 
@@ -55,7 +57,7 @@ function createBookElements() {
 function displayBooks(book_title, book_author, book_pages, statusButton, removeButton) {
   library.forEach(library => {
     for(let value in library) {
-      console.log(`${value}: ${library[value]}`);
+      // console.log(`${value}: ${library[value]}`);
       book_title.textContent = library.title;
       book_author.textContent = library.author;
       book_pages.textContent = library.pages;
@@ -63,4 +65,42 @@ function displayBooks(book_title, book_author, book_pages, statusButton, removeB
       removeButton.textContent = 'Remove';
     }
   });
+}
+
+addNewBookButton.addEventListener('click', () => {
+  const addNewBookForm = document.querySelector('.add-new-book-form');
+  addNewBookForm.style = 'display: block;';
+});
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const title = document.querySelector('#book-title').value;
+    const author = document.querySelector('#book-author').value;
+    const pages = document.querySelector('#book-pages').value;
+    const bookStatus = document.querySelector('#book-status');
+
+    if (bookStatus.checked == true) {
+      bookCurrentStatus = 'Read';
+    } else {
+      bookCurrentStatus = 'Not Read';
+    }
+    
+    addBookToLibrary(title, author, pages, bookCurrentStatus);
+    createBookElements();
+    hideForm();
+});
+
+function hideForm() {
+  const addNewBookForm = document.querySelector('.add-new-book-form');
+  const title = document.querySelector('#book-title');
+  const author = document.querySelector('#book-author');
+  const pages = document.querySelector('#book-pages');
+  const bookStatus = document.querySelector('#book-status');
+  
+  title.value = '';
+  author.value = '';
+  pages.value = '1';
+  bookStatus.checked = false;
+  addNewBookForm.style = 'display: none;';
 }
