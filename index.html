@@ -22,66 +22,73 @@
       </nav>
     </header>
     <main class="main-content">
+      <div class="add-new-book-form">
+        <div class="container">
+          <form action="#" class="form">
+            <div class="input">
+              <label for="book-title">Title</label>
+              <input
+                type="text"
+                id="book-title"
+                name="book_title"
+                placeholder="Book Title"
+                required
+                minlength="1"
+                maxlength="36"
+              />
+            </div>
+            <div class="input">
+              <label for="book-author">Author</label>
+              <input
+                type="text"
+                id="book-author"
+                name="book_author"
+                placeholder="Book Author"
+                required
+                minlength="1"
+                maxlength="36"
+              />
+            </div>
+            <div class="input">
+              <label for="book-pages">Pages</label>
+              <input
+                type="number"
+                id="book-title"
+                name="book-title"
+                placeholder="Book pages"
+                min="1"
+                required
+              />
+            </div>
+            <div class="input checkbox">
+              <label for="book-status" class="checkbox-label"
+                >Have you read it?</label
+              >
+              <input
+                type="checkbox"
+                class="checkbox-input"
+                id="book-status"
+                name="book_status"
+              />
+            </div>
+            <div class="button-container">
+              <button class="add-btn" type="submit">Add</button>
+            </div>
+        </div>
+        </form>
+      </div>
       <div class="add-new-book">
-        <button class="add-new-book-btn" type="button">+ Add New Book</button>
+        <button class="add-new-book-btn" data-add-new-book-btn type="button">
+          + Add New Book
+        </button>
       </div>
-      <div class="grid-container">
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-        <div class="book-container">
-          <div class="book-title">Marvel</div>
-          <div class="book-author">Thor</div>
-          <div class="book-pages">122 pages</div>
-          <button class="book-status-btn" type="button">Read</button>
-          <button class="book-remove-btn" type="button">Remove</button>
-        </div>
-      </div>
+      <div class="grid-container" data-grid-container></div>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <p class="project-creator">
         Made by <a href="https://github.com/AliFahed/Odin-Library">AliFahed</a>
       </p>
-    </footer>
+    </footer> -->
     <script src="script.js"></script>
   </body>
 </html>
