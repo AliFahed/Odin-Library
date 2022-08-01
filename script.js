@@ -1,10 +1,4 @@
 const gridContainer = document.querySelector('[data-grid-container]');
-const bookContainer = document.querySelector('[data-book-container]');
-const bookTitle = document.querySelector('[data-book-title]');
-const bookAuthor = document.querySelector('[data-book-author]');
-const bookPages = document.querySelector('[data-book-pages]');
-const bookStatusBtn = document.querySelector('[data-book-status]');
-const bookRemoveBtn = document.querySelector('[data-book-remove]');
 const addNewBookButton = document.querySelector('[data-add-new-book-btn]');
 const form = document.querySelector('form');
 
@@ -47,6 +41,18 @@ function createBookElements() {
   statusButton.classList.add('book-status-btn');
   book_container.appendChild(statusButton);
 
+  statusButton.addEventListener('click', () => {
+     if (statusButton.textContent === 'Not Read') {
+      statusButton.classList.add('book-status-read');
+      statusButton.classList.remove('book-status-not-read');
+      statusButton.textContent = 'Read';
+     } else if (statusButton.textContent === 'Read') {
+      statusButton.classList.add('book-status-not-read');
+      statusButton.classList.remove('book-status-read');
+      statusButton.textContent = 'Not Read';
+     }
+  });
+
   const removeButton = document.createElement('button');
   removeButton.classList.add('book-remove-btn');
   book_container.appendChild(removeButton);
@@ -63,6 +69,15 @@ function displayBooks(book_title, book_author, book_pages, statusButton, removeB
       book_pages.textContent = library.pages;
       statusButton.textContent = library.bookStatus;
       removeButton.textContent = 'Remove';
+
+      // add the background color when the button is generated in the book container
+      if (statusButton.textContent === 'Not Read') {
+        statusButton.classList.add('book-status-not-read');
+        statusButton.classList.remove('book-status-read');
+      } else if (statusButton.textContent === 'Read') {
+        statusButton.classList.add('book-status-read');
+        statusButton.classList.remove('book-status-not-read');
+      }
     }
   });
 }
