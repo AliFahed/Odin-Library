@@ -5,3 +5,14 @@ This is a JavaScript Project (Library) from The Odin Project JavaScript Path.
 - HTML
 - CSS
 - JavaSript
+
+## About:
+- Focused on Dom Manipulation, and Objects and Object Constructors.
+
+### Features:
+- The user can Add a new book to the library.
+- The user can Set the book status to Read or Not Read.
+- The user can Remove a specific book.
+
+#### Live Preview:
+- [Library Project](https://alifahed.github.io/Odin-Library/)
