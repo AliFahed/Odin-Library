@@ -9,15 +9,11 @@ function book(title, author, pages, bookStatus) {
   this.author = author,
   this.pages = pages,
   this.bookStatus = bookStatus
-  // this.info = function() {
-  //   console.log('"' + title + ' by ' + author + ', ' + pages + ', ' + bookStatus + '"');
-  // }
 }
 
 function addBookToLibrary(title, author, pages, bookStatus) {
   let newBook = new book(title, author, pages, bookStatus);
   library.push(newBook);
-  console.log(library);
 }
 
 function createBookElements() {
@@ -69,7 +65,6 @@ function createBookElements() {
 function displayBooks(book_title, book_author, book_pages, statusButton, removeButton) {
   library.forEach(library => {
     for(let value in library) {
-      // console.log(`${value}: ${library[value]}`);
       book_title.textContent = library.title;
       book_author.textContent = library.author;
       book_pages.textContent = library.pages;
@@ -107,7 +102,7 @@ form.addEventListener('submit', e => {
       bookCurrentStatus = 'Not Read';
     }
     
-    addBookToLibrary(title, author, pages, bookCurrentStatus);
+    addBookToLibrary(title, author, pages + ' Pages', bookCurrentStatus);
     createBookElements();
     hideForm();
 });
