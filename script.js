@@ -17,7 +17,7 @@ function book(title, author, pages, bookStatus) {
 function addBookToLibrary(title, author, pages, bookStatus) {
   let newBook = new book(title, author, pages, bookStatus);
   library.push(newBook);
-  // console.log(library);
+  console.log(library);
 }
 
 function createBookElements() {
@@ -56,6 +56,12 @@ function createBookElements() {
   const removeButton = document.createElement('button');
   removeButton.classList.add('book-remove-btn');
   book_container.appendChild(removeButton);
+
+  removeButton.addEventListener('click', () => {
+    book_container.remove();
+    
+    // remove the data from library
+  });
 
   displayBooks(book_title, book_author, book_pages, statusButton, removeButton);
 }
