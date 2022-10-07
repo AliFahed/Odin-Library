@@ -1,5 +1,9 @@
 # Odin-Library
-This is a JavaScript Project (Library) from The Odin Project JavaScript Path.
+This is a JavaScript Project "Library" application, that help users to track their progress on the books they have included in the library, select whether the book is read or not, or remove specific book from library.
+
+![image](https://user-images.githubusercontent.com/90851899/194580603-405ebd52-73aa-4737-ae92-78c12f5d1b2c.png)
+
+![image](https://user-images.githubusercontent.com/90851899/194580162-d0156ce0-86a3-4a6b-894a-0fd66d3f7399.png)
 
 ## Technologies Used:
 - HTML
@@ -7,9 +11,16 @@ This is a JavaScript Project (Library) from The Odin Project JavaScript Path.
 - JavaSript
 
 ## About:
-- Focused on Dom Manipulation, and Objects and Object Constructors.
+- Focused on Dom Manipulation, Objects and Object Constructors.
 
-### Features:
-- The user can Add a new book to the library.
-- The user can Set the book status to Read or Not Read.
-- The user can Remove a specific book.
+## Getting Started
+1. Fork this repo to your github account, run:
+```
+git clone git@github.com:AliFahed/Odin-Library.git
+```
+2. Change directory to the folder Odin-Library that you just cloned, run:
+```
+cd Odin-Library
+```
+3. Open the project with your favorite Code Editor.
+4. Go to index.html & Click Go Live, Five server or any other tool to open HTML page in browser.
