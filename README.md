@@ -1,6 +1,8 @@
 # Odin-Library
 This is a JavaScript Project "Library" application, that help users to track their progress on the books they have included in the library, select whether the book is read or not, or remove specific book from library.
 
+- [Live View](https://alifahed.github.io/Odin-Library/)
+
 ![image](https://user-images.githubusercontent.com/90851899/194580603-405ebd52-73aa-4737-ae92-78c12f5d1b2c.png)
 
 ![image](https://user-images.githubusercontent.com/90851899/194580162-d0156ce0-86a3-4a6b-894a-0fd66d3f7399.png)
